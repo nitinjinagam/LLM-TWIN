@@ -21,7 +21,7 @@
             ▼  Change Data Capture (CDC)
 ┌───────────────────────────────────────┐
 │  3. Message Queue (RabbitMQ)          │
-│     Streams database changes in real-time│
+│  Streams database changes in real-time│
 └───────────┬───────────────────────────┘
             │
             ▼
@@ -34,7 +34,7 @@
             │                                   │
             ▼ (Text Artifacts)                  ▼ (Vector Embeddings)
 ┌───────────────────────────────────────┐ ┌──────────────────────────────┐
-│  5. Instruction Dataset Generation     │ │  6. Vector DB (Qdrant)       │
+│  5. Instruction Dataset Generation    │ │  6. Vector DB (Qdrant)       │
 │     • Pairs raw text into QA format   │ │     Acts as the "Long-Term   │
 │     • Acts as SFT Feature Store       │ │     Knowledge Store" for RAG │
 └───────────┬───────────────────────────┘ └──────────────┬───────────────┘
@@ -72,7 +72,7 @@
 │       │                                                │       │       │
 │       ▼                                                │       │       │
 │ 12. Fine-Tuned LLM (Loaded from Registry)              │       │       │
-│     Generates final text matching your persona/style  │       │       │
+│     Generates final text matching your persona/style   │       │       │
 │       │                                                │       │       │
 │       ▼                                                │       │       │
 │  [ Final Output Persona Match ] ◄──────────────────────┴───────┘       │
