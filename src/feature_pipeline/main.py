@@ -3,7 +3,7 @@ from bytewax.dataflow import Dataflow
 from core.db.qdrantdb import QdrantDatabaseConnector
 from data_flow.stream_input import RabbitMQSource
 from data_flow.stream_output import QdrantOutput
-from data_logic.dispatchers import (
+from data_logic.dispatcher import (
     ChunkingDispatcher,
     CleaningDispatcher,
     EmbeddingDispatcher,
