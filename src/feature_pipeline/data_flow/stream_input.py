@@ -6,7 +6,7 @@ from typing import Generic, Iterable, List, Optional, TypeVar
 from bytewax.inputs import FixedPartitionedSource, StatefulSourcePartition
 from config import settings
 from core import get_logger
-from core.mq import RabbitMQConnection
+from core.msgq import RabbitMQConnection
 
 logger = get_logger(__name__)
 
