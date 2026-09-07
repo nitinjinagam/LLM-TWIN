@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 
-from models.base import DataModel
-from models.chunk import ArticleChunkModel, PostChunkModel, RepositoryChunkModel
-from models.embedding import (
+from document_structs.base import DataModel
+from document_structs.chunk import ArticleChunkModel, PostChunkModel, RepositoryChunkModel
+from document_structs.embedding import (
     ArticleEmbeddedChunkModel,
     PostEmbeddedChunkModel,
     RepositoryEmbeddedChunkModel,
 )
-from utils.embeddings import embedd_text
+from utils.embedding import embedd_text
 
 
 class EmbeddingDataHandler(ABC):

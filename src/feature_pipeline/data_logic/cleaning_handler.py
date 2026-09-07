@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 
-from models.base import DataModel
-from models.clean import ArticleCleanedModel, PostCleanedModel, RepositoryCleanedModel
-from models.raw import ArticleRawModel, PostsRawModel, RepositoryRawModel
+from document_structs.base import DataModel
+from document_structs.clean import ArticleCleanedModel, PostCleanedModel, RepositoryCleanedModel
+from document_structs.raw import ArticleRawModel, PostsRawModel, RepositoryRawModel
 from utils.cleaning import clean_text
 
 

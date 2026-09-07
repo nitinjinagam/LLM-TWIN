@@ -1,7 +1,7 @@
 from bytewax.outputs import DynamicSink, StatelessSinkPartition
 from core import get_logger
 from core.db.qdrantdb import QdrantDatabaseConnector
-from models.base import VectorDBDataModel
+from document_structs.base import VectorDBDataModel
 from qdrant_client.models import Batch
 
 logger = get_logger(__name__)

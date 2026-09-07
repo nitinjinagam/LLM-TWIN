@@ -1,9 +1,9 @@
 import hashlib
 from abc import ABC, abstractmethod
 
-from models.base import DataModel
-from models.chunk import ArticleChunkModel, PostChunkModel, RepositoryChunkModel
-from models.clean import ArticleCleanedModel, PostCleanedModel, RepositoryCleanedModel
+from document_structs.base import DataModel
+from document_structs.chunk import ArticleChunkModel, PostChunkModel, RepositoryChunkModel
+from document_structs.clean import ArticleCleanedModel, PostCleanedModel, RepositoryCleanedModel
 from utils.chunking import chunk_text
 
 

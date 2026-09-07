@@ -1,6 +1,6 @@
 from core import get_logger
-from models.base import DataModel
-from models.raw import ArticleRawModel, PostsRawModel, RepositoryRawModel
+from document_structs.base import DataModel
+from document_structs.raw import ArticleRawModel, PostsRawModel, RepositoryRawModel
 
 from data_logic.chunking_data_handlers import (
     ArticleChunkingHandler,

@@ -1,6 +1,6 @@
 from typing import Optional
 
-from models.base import DataModel
+from document_structs.base import DataModel
 
 
 class PostChunkModel(DataModel):
