@@ -51,7 +51,7 @@ class QdrantDatabaseConnector:
         self,
         collection_name: str,
         query_vector: list,
-        query_filter: document_structs.Filter | None = None,
+        query_filter: models.Filter | None = None,
         limit: int = 3,
     ) -> list:
         return self._instance.search(
