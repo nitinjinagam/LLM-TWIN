@@ -10,16 +10,16 @@ from unstructured.cleaners.core import (
 def unbold_text(text):
     # Mapping of bold numbers to their regular equivalents
     bold_numbers = {
-        "𝟬": "0",
-        "𝟭": "1",
-        "𝟮": "2",
-        "𝟯": "3",
-        "𝟰": "4",
-        "𝟱": "5",
-        "𝟲": "6",
-        "𝟳": "7",
-        "𝟴": "8",
-        "𝟵": "9",
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
     }
 
     # Function to convert bold characters (letters and numbers)
