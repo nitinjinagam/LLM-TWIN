@@ -7,31 +7,38 @@ from pathlib import Path
 ROOT_DIR = str(Path(__file__).parent.parent)
 sys.path.append(ROOT_DIR)
 
-
-from core import get_logger
+from core import logger_utils
 from core.config import settings
-from core.rag.retriever import VectorRetriever
-
-logger = get_logger(__name__)
+from llm_twin import LLMTwin
 
 settings.patch_localhost()
+
+logger = logger_utils.get_logger(__name__)
+logger.info(
+    f"Added the following directory to PYTHONPATH to simulate multiple modules: {ROOT_DIR}"
+)
 logger.warning(
     "Patched settings to work with 'localhost' URLs. \
     Remove the 'settings.patch_localhost()' call from above when deploying or running inside Docker."
 )
 
+
 if __name__ == "__main__":
+    inference_endpoint = LLMTwin(mock=False)
+
     query = """
 Hello I am Nitin Jinagam.
         
 Could you draft an article paragraph discussing RAG? 
 I'm particularly interested in how to design a RAG system.
-"""
+        """
 
-    retriever = VectorRetriever(query=query)
-    hits = retriever.retrieve_top_k(k=6, to_expand_to_n_queries=5)
-    reranked_hits = retriever.rerank(hits=hits, keep_top_k=5)
+    response = inference_endpoint.generate(
+        query=query, enable_rag=True, sample_for_evaluation=True
+    )
 
-    logger.info("====== RETRIEVED DOCUMENTS ======")
-    for rank, hit in enumerate(reranked_hits):
-        logger.info(f"Rank = {rank} : {hit}")
+    logger.info("=" * 50)
+    logger.info(f"Query: {query}")
+    logger.info("=" * 50)
+    logger.info(f"Answer: {response['answer']}")
+    logger.info("=" * 50)

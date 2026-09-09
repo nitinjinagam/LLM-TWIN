@@ -50,7 +50,7 @@ demo = gr.ChatInterface(
     ),
     additional_inputs=[
         gr.Textbox(
-            "Paul Iusztin",
+            "Nitin Jinagam",
             label="Who are you?",
         )
     ],
@@ -62,15 +62,15 @@ demo = gr.ChatInterface(
     examples=[
         [
             "Draft a post about RAG systems.",
-            "Paul Iusztin",
+            "Nitin Jinagam",
         ],
         [
             "Draft an article paragraph about vector databases.",
-            "Paul Iusztin",
+            "Nitin Jinagam",
         ],
         [
             "Draft a post about LLM chatbots.",
-            "Paul Iusztin",
+            "Nitin Jinagam",
         ],
     ],
     cache_examples=False,
